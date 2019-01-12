@@ -1,5 +1,5 @@
 #!/bin/bash
-#if [ ! -d course-v1 ]; then
+if [ ! -d course-v1 ]; then
         pip install pillow==4.1.1 --upgrade
         pip install torch_nightly -f https://download.pytorch.org/whl/nightly/cu92/torch_nightly.html --upgrade
 
@@ -12,7 +12,7 @@
         ln -s /root/.fastai/data /content
         rm -rf /content/sample_data/
         git clone https://github.com/fastai/fastai
-#fi
+fi
 
 pip install fastai --upgrade
 cd fastai
